@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.sudoku-board {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.sudoku-row {
+    display: flex;
+}
+
+.sudoku-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Add border styles for 3x3 submatrices */
+.sudoku-row:nth-child(3n+1) .sudoku-cell {
+    border-top: 2px solid black;
+}
+
+.sudoku-row:nth-child(3n+3) .sudoku-cell {
+    border-bottom: 2px solid black;
+}
+
+.sudoku-cell:nth-child(3n+1) {
+    border-left: 2px solid black;
+}
+
+.sudoku-cell:nth-child(3n+3) {
+    border-right: 2px solid black;
+}
+
+.solve-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.solve-button.solved {
+    background-color: green;
+}
